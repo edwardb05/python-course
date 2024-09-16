@@ -1,13 +1,37 @@
 ##################### Extra Hard Starting Project ######################
+import datetime as dt 
+import random
+import smtplib
+import pandas as pd
 
-# 1. Update the birthdays.csv
+GMAILEMAIL = "edpythontest123@gmail.com"
+GMAILAPPPWD ="rtgg khgl vebo tuof"
+# ------send email ----#
+def sendemail(name, year, EMAIL ):
+    age = currentyear - year  
+    rannum = random.randint(1,3)
+    with open(f'birthday-wisher-extrahard-start/letter_templates/letter_{rannum}.txt', 'r') as letter:
+        msg = letter.read()
+    namedmsg =msg.replace("[NAME]", name)
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls() #Start secure connections
+        connection.login(user= GMAILEMAIL, password= GMAILAPPPWD)
+        connection.sendmail(
+            from_addr= GMAILEMAIL, 
+            to_addrs=EMAIL, 
+            msg=f"Subject:Can't believe you're {age}\n\n {namedmsg}")
+    
 
-# 2. Check if today matches a birthday in the birthdays.csv
+# Read the CSV file
+data = pd.read_csv("birthday-wisher-extrahard-start/birthdays.csv")
+people = data.to_dict(orient="records")
+today = dt.datetime.now()
+currentmonth = today.month
+currentday = today.day
+currentyear= today.year
+for person in people:
+    if person['month'] == currentmonth and person['day'] == currentday:
+        sendemail(person["name"], person['year'], person['email'])
+        
 
-# 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
-
-# 4. Send the letter generated in step 3 to that person's email address.
-
-
-
-
+# Added daily automation with python anywhere
