@@ -11,7 +11,7 @@ ALPHAVANTAGE_API_KEY = " B4PW58ELPEBT8D89"
 NEWS_API_KEY = "4c1c6b72f1c041cf9cefc34fa8730af3"
 GMAILEMAIL = "edpythontest123@gmail.com"
 GMAILAPPPWD ="rtgg khgl vebo tuof"
-EMAIL = os.getenv('MYEMAIL')
+EMAIL = "edwardbrady05@gmail.com"
 
 def getyesterdaydate(todaydate):
     # The given date string
