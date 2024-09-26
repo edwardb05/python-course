@@ -1,0 +1,22 @@
+def closedbrackets(string):
+    correspodningbrackets= {
+            "(":")",
+            "{":"}",
+            "[":"]",
+    }
+    
+    lastopened=[]
+    for bracket in string:
+        if bracket == "(" or bracket =="{" or bracket == "[":
+            lastopened.append(bracket)
+        else:
+            if bracket == correspodningbrackets[lastopened[-1]]:
+                lastopened.pop()
+            else:
+                return False
+    if lastopened == []:
+        return True
+    else:
+        return False
+    
+print(closedbrackets("{[]}"))

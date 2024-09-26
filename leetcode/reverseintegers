@@ -1,0 +1,14 @@
+def reverseinteger(integer):
+    integer = str(integer)
+    negative = False
+    if integer[0]== "-":
+        integer = integer[1:]
+        negative= True
+    reverse = integer[::-1]
+    if negative== True:
+        reverse = f'-{reverse}'
+    return int(reverse)
+
+print(reverseinteger(120))
+    
+    
