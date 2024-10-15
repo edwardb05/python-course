@@ -1,7 +1,8 @@
 import requests
 import datetime as dt
-TOKEN = "qwertyuiop"
-USER ="edb05"
+import os
+TOKEN = os.getenv("TOKEN")
+USER =os.getenv("USER")
 pixela_endpoint = "https://pixe.la/v1/users"
 graph_endpoint = f'{pixela_endpoint}/{USER}/graphs/graph1'
 pixel_endpoint = f'{graph_endpoint}/20240918'

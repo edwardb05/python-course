@@ -7,11 +7,11 @@ from email.mime.multipart import MIMEMultipart
 import os
 STOCK = ["TSLA","DIS","LSCC"]
 COMPANY_NAME = ["Tesla Inc", "Disney", 'LSCC']
-ALPHAVANTAGE_API_KEY = " B4PW58ELPEBT8D89"
-NEWS_API_KEY = "4c1c6b72f1c041cf9cefc34fa8730af3"
-GMAILEMAIL = "edpythontest123@gmail.com"
-GMAILAPPPWD ="rtgg khgl vebo tuof"
-EMAIL = "edwardbrady05@gmail.com"
+ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
+GMAILEMAIL = os.getenv("GMAILEMAIL")
+GMAILAPPPWD =os.getenv("GMAILAPPPWD")
+EMAIL = os.getenv("EMAIL")
 
 def getyesterdaydate(todaydate):
     # The given date string

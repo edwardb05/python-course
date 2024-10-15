@@ -1,10 +1,11 @@
 import requests
 from datetime import datetime
 import smtplib
-# MYLAT = 49.466004
-# MYLNG = -2.536076
-GMAILEMAIL = "edpythontest123@gmail.com"
-GMAILAPPPWD ="rtgg khgl vebo tuof"
+
+import os
+
+GMAILEMAIL = os.getenv("GMAILEMAIL")
+GMAILAPPPWD = os.getenv("GMAILAPPPWD")
 
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
 response.raise_for_status()

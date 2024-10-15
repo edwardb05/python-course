@@ -3,9 +3,10 @@ import datetime as dt
 import random
 import smtplib
 import pandas as pd
+import os
 
-GMAILEMAIL = "edpythontest123@gmail.com"
-GMAILAPPPWD ="rtgg khgl vebo tuof"
+GMAILEMAIL = os.getenv("GMAILEMAIL")
+GMAILAPPPWD = os.getenv("GMAILEAPPPWD")
 # ------send email ----#
 def sendemail(name, year, EMAIL ):
     age = currentyear - year  

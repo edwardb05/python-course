@@ -1,12 +1,13 @@
 import smtplib
 import datetime as dt
 import random
+import os
 
-GMAILEMAIL = "edpythontest123@gmail.com"
-GMAILPWD = "Python123"
-GMAILAPPPWD ="rtgg khgl vebo tuof"
-YAHOOEMAIL = "edpythontest@yahoo.com"
-YAHOOPWD = "Python123!"
+GMAILEMAIL = os.getenv("GMAILEMAIL")
+GMAILPWD = os.getenv("GMAILEPWD")
+GMAILAPPPWD =os.getenv("GMAILAPPPWD")
+YAHOOEMAIL = os.getenv("YAHOOEMAIL")
+YAHOOPWD = os.getenv("YAHOOPWD")
 
 def motivationalemail():
     quote =random.choice(quotes)
