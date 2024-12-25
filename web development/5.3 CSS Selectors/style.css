@@ -1,0 +1,31 @@
+ol {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
+
+/* Write your CSS below, don't change the rules above. */
+/* paragraph elemnts */
+p {
+  color: red
+}
+
+/* Class 'note */
+.note{
+  font-size: 20px
+}
+
+/* id selectors */
+#id-selector-demo{
+  color: green
+}
+
+/* list with value attribvute 4 */
+li[value="4"] {
+  color: blue;
+}
+
+/* star selects all */
+*{
+  text-align: center
+}
