@@ -9,6 +9,6 @@ def reverseinteger(integer):
         reverse = f'-{reverse}'
     return int(reverse)
 
-print(reverseinteger(120))
+print(reverseinteger(4360))
     
     
