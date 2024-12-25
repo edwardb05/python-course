@@ -1,0 +1,23 @@
+class Solution(object):
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        sets=[]
+        for i,a in enumerate(nums):
+            for b,j in enumerate(nums[i+1:]):
+                    for c in nums[j+2:]:
+                        # print(i)
+
+                        if a+b+c ==0:
+                            print("adding")
+                            sets.append([a,b,c])
+                            print(sets)
+    
+        print(sets)
+        return sets
+                
+nums = [-1,0,1,2,-1,-4]
+solution = Solution()
+solution.threeSum(nums)
