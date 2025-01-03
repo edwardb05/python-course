@@ -1,0 +1,31 @@
+/* Use # for id selectors */
+#red{
+    color: red
+}
+
+#blue{
+    color: blue
+}
+
+#orange{
+    color: orange
+}
+
+#green{
+    color: green
+}
+
+#yellow{
+    color: yellow
+}
+ 
+/* set class color_title font-weight set to normal */
+.color_title {
+  font-weight: normal
+}
+  
+/* Set all imgs to 200 x 200 */
+img {
+  height: 200px;
+  width: 200px;
+}
